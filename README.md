@@ -32,10 +32,10 @@ Skills Learned
 - Set up an edge firewall on the network and configured rules to allow HTTP/HTTPS traffic from WAN to a designated web server while blocking all other inbound HTTP/HTTPS traffic.
 
 <img width="400" height="300" alt="Running Processes bash script Daisy Haas" src="https://github.com/user-attachments/assets/c59d457c-c458-4fb6-9fae-ecb6bec6e122" />
-<img width="600" height="200" alt="Screenshot 2025-10-08 211419" src="https://github.com/user-attachments/assets/1e107ae9-c6de-4a3c-9d71-f64579ee3222" />
+<img width="400" height="200" alt="Screenshot 2025-10-08 211419" src="https://github.com/user-attachments/assets/1e107ae9-c6de-4a3c-9d71-f64579ee3222" />
 
 - Bash-based automation script capturing active system processes with output to a log file. Execution permissions were configured and script output was validated to confirm successful data capture in a Linux environment.
 
-<img width="400" height="300" alt="Greenbone" src="https://github.com/user-attachments/assets/438d8617-76da-46a7-bbba-beef84bb86e1" />
+<img width="600" height="300" alt="Greenbone" src="https://github.com/user-attachments/assets/438d8617-76da-46a7-bbba-beef84bb86e1" />
 
 - Configured access control and permissions within Greenbone Vulnerability Management to enforce the least privilege principle and restrict administrative functions to authorized users and IP address ranges.
