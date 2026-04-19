@@ -12,6 +12,7 @@ Tools Used
 
 Environments
 
+- Virtualized lab environments (VMware-based)
 - Linux (Ubuntu)
 
 Methodology
