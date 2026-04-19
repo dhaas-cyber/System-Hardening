@@ -13,7 +13,6 @@ Tools Used
 Environments
 
 - Linux (Ubuntu)
-- Windows
 
 Methodology
 
