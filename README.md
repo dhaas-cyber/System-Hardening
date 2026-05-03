@@ -1,51 +1,66 @@
-# System-Hardening
+# System Hardening
 
-Objective
+**Objective**
 
 Design and implement a layered system hardening strategy that reduces the attack surface, enforces security policies, and improves system resilience through firewall configuration, operating system hardening, automation scripting, and implementing least privilege. 
 
-Tools Used
+**Tools Used**
 
 - GNS3
 - OPNsense
 - Greenbone Vulnerability Management
 
-Environments
+**Environments**
 
 - Virtualized lab environments (VMware-based)
 - Linux (Ubuntu)
 
-Methodology
+**Methodology**
 
-- This project followed a layered system hardening approach implemented within a virtualized Linux environment. Security controls were applied incrementally across network and host layers to reduce the attack surface and enforce least privilege.
-1. Network Security Enforcement: A virtual network topology was designed and simulated using GNS3 to replicate an enterprise environment, including an edge firewall, internal segmentation, and web server. Firewall rules were configured using OPNsense to restrict inbound traffic, allowing only required services while blocking unauthorized access attempts.
-2. System Automation & Hardening: Developed Bash-based automation scripts to validate running services and export logs for security audits. File permissions and execution controls were applied within the Linux environment.
+This project followed a layered system-hardening approach implemented in a virtualized Linux environment. Security controls were applied incrementally across network and host layers to reduce the attack surface and enforce least privilege.
+
+1. Network Security Enforcement: A virtual network topology was designed and simulated using GNS3 to replicate an enterprise environment, including an edge firewall, internal segmentation, and web server. Firewall rules were configured using OPNsense to restrict inbound traffic, allowing only required services while blocking unauthorized access attempts and were tested to confirm enforcement of access restrictions.
+2. System Automation & Hardening: Developed Bash-based automation scripts to collect and log active system processes, enabling consistent visibility into system activity. This supported validation of running services and aided in identifying unauthorized or unexpected processes. File permissions and execution controls were applied to enforce secure script usage within the Linux environment.
 3. Vulnerability Assessment & Validation: Performed vulnerability scans using Greenbone Vulnerability Management to validate the effectiveness of implemented firewall and system hardening controls. Configured platform user roles and permissions to support controlled access.
 
-Key Findings
+**Validation & Analysis**
 
-- Firewall rule enforcement significantly reduced exposed network services, limiting external access to only explicitly permitted traffic.
-- Linux-based automation scripts improved visibility into active system processes.
-- File permission controls prevented unauthorized file modification.
-- Greenbone scans identified residual configuration risks, highlighting the importance of continuous security validation.
-- A layered security approach provided stronger security posture than any single control.
+To validate the effectiveness of implemented controls, vulnerability scans were compared before and after firewall configuration and system hardening. Exposed services, access paths, and system processes were analyzed to determine whether controls reduced the attack surface and enforced least privilege. This ensured that security improvements were measurable rather than assumed.
 
-Skills Learned
-1. Design - Network topology design, segmentation planning, firewall placement, lab simulation.
-2. Protection - Firewall rule configuration, traffic filtering, least privilege design, traffic control.
-3. Hardening - Linux system hardening, file permission management, bash scripting for automation, process auditing and system monitoring, secure script execution.
-4. Validation - Vulnerability scanning and analysis, security control validation, residual risk identification, scan result analysis, verification of firewall effectiveness.
+**Analyst Decision-Making**
+
+Key decisions made:
+- Restricted inbound traffic to only required services (HTTP/HTTPS) to minimize the attack surface
+- Used vulnerability scanning to validate controls rather than assuming their effectiveness
+- Implemented automation scripts to improve visibility into system activity
+- Applied least privilege principles to reduce the risk of unauthorized access
+
+**Key Findings**
+
+- Firewall rule enforcement reduced exposed services from multiple open ports to only HTTP/HTTPS (80/443), significantly limiting external access to required services
+- Bash automation scripts provided consistent visibility into active system processes, supporting system auditing and validation of authorized services
+- File permission controls prevented unauthorized file modification
+- Initial vulnerability scans identified multiple exposed services and configuration risks, including unnecessary open ports and broader access paths
+- After implementing firewall rules and system hardening controls, subsequent scans confirmed a reduced attack surface, with fewer exposed services and improved access restrictions
+- A layered security approach provided a stronger security posture than any single control
+
+**Skills Demonstrated**
+
+1. Design - Network topology design, segmentation planning, firewall placement, and lab simulation
+2. Protection - Firewall rule configuration, traffic filtering, least privilege design, and traffic control
+3. Hardening - Linux system hardening, file permission management, bash scripting for automation, process auditing and system monitoring, secure script execution
+4. Validation - Vulnerability scanning and analysis, security control validation, residual risk identification, scan result analysis, verification of firewall effectiveness
 
 <img width="400" height="300" alt="firewall" src="https://github.com/user-attachments/assets/2edf0aae-b0b4-43a1-8462-78a51e5d10ea" />
 <img width="400" height="300" alt="Screenshot 2025-10-16 214624" src="https://github.com/user-attachments/assets/324ec8bd-2b54-484b-8588-25a602e1a228" />
 
-- Set up an edge firewall on the network and configured rules to allow HTTP/HTTPS traffic from WAN to a designated web server while blocking all other inbound HTTP/HTTPS traffic.
+- Configured and validated edge firewall rules to restrict inbound traffic to only HTTP/HTTPS (80/443) for a designated web server, while blocking all other unsolicited external requests. Traffic filtering was tested to confirm that only explicitly permitted services were accessible, reducing the external attack surface.
 
 <img width="400" height="300" alt="Running Processes bash script Daisy Haas" src="https://github.com/user-attachments/assets/c59d457c-c458-4fb6-9fae-ecb6bec6e122" />
 <img width="400" height="200" alt="Screenshot 2025-10-08 211419" src="https://github.com/user-attachments/assets/1e107ae9-c6de-4a3c-9d71-f64579ee3222" />
 
-- Bash-based automation script capturing active system processes with output to a log file. Execution permissions were configured and script output was validated to confirm successful data capture in a Linux environment.
+- Developed and executed a Bash-based automation script to collect and log active system processes, enabling continuous visibility into system activity. Output logs were reviewed to validate running services and identify any unauthorized or unexpected processes. File permissions and execution controls were applied to ensure secure script usage.
 
 <img width="600" height="300" alt="Greenbone" src="https://github.com/user-attachments/assets/438d8617-76da-46a7-bbba-beef84bb86e1" />
 
-- Configured access control and permissions within Greenbone Vulnerability Management to enforce the least privilege principle and restrict administrative functions to authorized users and IP address ranges.
+- Configured role-based access controls within Greenbone Vulnerability Management to enforce least privilege and restrict administrative actions to authorized users and IP ranges. Vulnerability scan results were analyzed to validate the effectiveness of implemented firewall and system hardening controls and to identify residual risks.
