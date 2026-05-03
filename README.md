@@ -17,11 +17,11 @@ Design and implement a layered system hardening strategy that reduces the attack
 
 **Methodology**
 
-This project followed a layered system-hardening approach implemented in a virtualized Linux environment. Security controls were applied incrementally across network and host layers to reduce the attack surface and enforce least privilege.
+This project followed a layered system-hardening and security monitoring approach implemented in a virtualized Linux environment. Security controls were deployed across network and host layers to reduce the attack surface, enforce least privilege, and improve system visibility for security analysis.
 
-1. Network Security Enforcement: A virtual network topology was designed and simulated using GNS3 to replicate an enterprise environment, including an edge firewall, internal segmentation, and web server. Firewall rules were configured using OPNsense to restrict inbound traffic, allowing only required services while blocking unauthorized access attempts and were tested to confirm enforcement of access restrictions.
-2. System Automation & Hardening: Developed Bash-based automation scripts to collect and log active system processes, enabling consistent visibility into system activity. This supported validation of running services and aided in identifying unauthorized or unexpected processes. File permissions and execution controls were applied to enforce secure script usage within the Linux environment.
-3. Vulnerability Assessment & Validation: Performed vulnerability scans using Greenbone Vulnerability Management to validate the effectiveness of implemented firewall and system hardening controls. Configured platform user roles and permissions to support controlled access.
+1. Network Security Enforcement & Traffic Control: A virtual enterprise network topology was designed and simulated using GNS3, including an edge firewall, internal network segmentation, and a web server. OPNsense Firewall rules were implemented to restrict inbound and lateral traffic to only required services. Rule effectiveness was validated through controlled access testing to confirm enforcement and identify unauthorized access attempts within the environment.
+2. System Hardening and Visibility: Bash-based automation scripts were developed to collect and log active system processes, improving host-level visibility into running services. This supported ongoing monitoring of system behavior and helped identify unexpected or unauthorized processes. File permissions and execution controls were enforced to align with least privilege principles and secure script execution.
+3. Vulnerability Assessment and Security Validation: Greenbone Vulnerability Management was used to perform vulnerability scans to assess system exposure and validate the effectiveness of implemented security controls. Scan results were analyzed to confirm mitigation of identified risks and to support continuous security posture improvement. User roles and access permissions within the platform were configured to enforce controlled access to security data.
 
 **Validation & Analysis**
 
