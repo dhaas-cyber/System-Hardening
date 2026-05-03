@@ -46,10 +46,20 @@ Key decisions made:
 
 **Skills Demonstrated**
 
-1. Design - Network topology design, segmentation planning, firewall placement, and lab simulation
-2. Protection - Firewall rule configuration, traffic filtering, least privilege design, and traffic control
-3. Hardening - Linux system hardening, file permission management, bash scripting for automation, process auditing and system monitoring, secure script execution
-4. Validation - Vulnerability scanning and analysis, security control validation, residual risk identification, scan result analysis, verification of firewall effectiveness
+Network Security & Architecture:
+- Designed and simulated enterprise network topologies using GNS3, including segmentation and firewall placement to support secure network boundaries
+
+Security Controls & Traffic Enforcement:
+- Configured firewall rules and traffic filtering using OPNsense to enforce least privilege access and restrict unauthorized inbound and lateral traffic
+- Implemented security control policies to support controlled service exposure and attack surface reduction
+
+System Hardening & Monitoring:
+- Performed Linux system hardening, including file permission management, secure execution controls, and service restriction
+- Developed Bash scripts for process auditing and system activity visibility to support host-level monitoring and detection of abnormal behavior
+
+Vulnerability Management & Security Analysis:
+- Conducted vulnerability scans using Greenbone Vulnerability Management to assess system exposure and identify security weaknesses
+- Analyzed scan results to validate firewall and host-based control effectiveness and identify residual risk in the environment
 
 <img width="400" height="300" alt="firewall" src="https://github.com/user-attachments/assets/2edf0aae-b0b4-43a1-8462-78a51e5d10ea" />
 <img width="400" height="300" alt="Screenshot 2025-10-16 214624" src="https://github.com/user-attachments/assets/324ec8bd-2b54-484b-8588-25a602e1a228" />
